@@ -1,0 +1,8 @@
+{
+  "name": "Switch Two Layouts",
+  "description": "XKB shortcuts to switch keyboard layouts (such as Ctrl+Shift, Caps Lock, etc.) will cycle between two first layouts only.",
+  "uuid": "switchtwolayouts@qtmax.dev",
+  "shell-version": [
+    "3.38"
+  ]
+}
