@@ -1,9 +1,10 @@
 // SPDX-License-Identifier: MIT OR GPL-2.0-or-later
-// Copyright (c) 2021 Maxim Mikityanskiy
+// Copyright (c) 2021-2023 Maxim Mikityanskiy
 
-const GObject = imports.gi.GObject;
-const Keyboard = imports.ui.status.keyboard;
-const KeyboardManager = imports.misc.keyboardManager;
+import GObject from 'gi://GObject';
+import { Extension } from 'resource:///org/gnome/shell/extensions/extension.js';
+import * as Keyboard from 'resource:///org/gnome/shell/ui/status/keyboard.js';
+import * as KeyboardManager from 'resource:///org/gnome/shell/misc/keyboardManager.js';
 
 const signalId = 'modifiers-accelerator-activated';
 
@@ -26,8 +27,9 @@ function patchedModifiersSwitcher() {
 	return true;
 }
 
-class Extension {
-	constructor() {
+export default class SwitchTwoLayoutsExtension extends Extension {
+	constructor(metadata) {
+		super(metadata);
 		this.realHandlerId = GObject.signal_handler_find(global.display, { signalId: signalId });
 	}
 
@@ -40,8 +42,4 @@ class Extension {
 		global.display.disconnect(this.patchedHandlerId);
 		global.display.unblock_signal_handler(this.realHandlerId);
 	}
-}
-
-function init() {
-	return new Extension();
 }
