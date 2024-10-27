@@ -2,6 +2,7 @@
   "name": "Switch Two Layouts",
   "description": "This extension makes XKB shortcuts to switch keyboard layouts (such as Caps Lock, Ctrl+Shift, etc.) cycle between the two first layouts. The other ones still can be selected via the menu or using GNOME's shortcuts (Super+Space, Shift+Super+Space). It's useful when you have two primary layouts and more additional, which are used more rarely.",
   "uuid": "switchtwolayouts@qtmax.dev",
+  "url": "https://bitbucket.org/qt-max/gnome-shell-extension-switchtwolayouts/",
   "shell-version": [
     "45", "46", "47"
   ]
