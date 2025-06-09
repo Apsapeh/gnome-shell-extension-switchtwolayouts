@@ -1,0 +1,13 @@
+<schemalist>
+  <schema id="org.gnome.shell.extensions.switchtwolayouts" path="/org/gnome/shell/extensions/switchtwolayouts/">
+    <key name="layout1" type="s">
+      <default>'us'</default>
+      <summary>First layout</summary>
+    </key>
+    <key name="layout2" type="s">
+      <default>'ru'</default>
+      <summary>Second layout</summary>
+    </key>
+  </schema>
+</schemalist>
+
